@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pKh-R1-IFg">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Chronology-->
+        <scene sceneID="zu1-RO-Zzx">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="aWw-ER-mDj" customClass="EpisodesListTableViewController" customModule="StarWarsChronology" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PqS-oS-lsp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.061107062550000001" green="0.061107062550000001" blue="0.061107062550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.061107062550000001" green="0.061107062550000001" blue="0.061107062550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="geh-cB-qkJ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starwarslogo" translatesAutoresizingMaskIntoConstraints="NO" id="N5l-br-Vka">
+                                    <rect key="frame" x="85" y="8" width="205" height="107"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="107" id="2Wn-nF-cqF"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.061107062550000001" green="0.061107062550000001" blue="0.061107062550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="N5l-br-Vka" firstAttribute="top" secondItem="geh-cB-qkJ" secondAttribute="top" constant="8" id="2Vt-qF-ENu"/>
+                                <constraint firstItem="N5l-br-Vka" firstAttribute="leading" secondItem="geh-cB-qkJ" secondAttribute="leading" constant="85" id="Lk5-X0-LMl"/>
+                                <constraint firstAttribute="trailing" secondItem="N5l-br-Vka" secondAttribute="trailing" constant="85" id="hUd-V3-1b4"/>
+                            </constraints>
+                        </view>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TM &amp; © Lucasfilm Ltd. All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nl5-ob-k8R">
+                            <rect key="frame" x="0.0" y="321" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="130" id="iwz-10-adf" customClass="EpisodeTableViewCell" customModule="StarWarsChronology" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="163" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwz-10-adf" id="m3W-5d-Kki">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbX-EQ-WLU">
+                                            <rect key="frame" x="16.999999999999996" y="10" width="42.666666666666657" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="AUs-tL-duY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                            <color key="textColor" red="0.97399586439999997" green="0.76294004920000003" blue="0.27411234379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB7-Cu-m7d">
+                                            <rect key="frame" x="74.666666666666686" y="30.999999999999996" width="250" height="14.333333333333332"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="250" id="Evn-7z-cxi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmQ-Jl-npc">
+                                            <rect key="frame" x="41" y="38" width="1" height="80"/>
+                                            <color key="backgroundColor" red="0.94845539329999995" green="0.7565130591" blue="0.37270873789999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="8Vj-xM-zHd"/>
+                                                <constraint firstAttribute="width" constant="1" id="sIs-Bl-1kk"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39h-Gi-BTE">
+                                            <rect key="frame" x="74.666666666666671" y="10" width="31.333333333333329" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="dvh-Ha-fzp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.061107062550000001" green="0.061107062550000001" blue="0.061107062550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="39h-Gi-BTE" firstAttribute="top" secondItem="XbX-EQ-WLU" secondAttribute="top" id="01U-GD-WAH"/>
+                                        <constraint firstItem="XbX-EQ-WLU" firstAttribute="leading" secondItem="m3W-5d-Kki" secondAttribute="leadingMargin" constant="1" id="8Lr-AZ-NVP"/>
+                                        <constraint firstItem="YmQ-Jl-npc" firstAttribute="top" secondItem="XbX-EQ-WLU" secondAttribute="bottom" constant="1" id="9i6-fA-S7G"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YmQ-Jl-npc" secondAttribute="bottom" constant="1" id="KPa-HF-Itx"/>
+                                        <constraint firstItem="39h-Gi-BTE" firstAttribute="leading" secondItem="XbX-EQ-WLU" secondAttribute="trailing" constant="15" id="Q7v-Ay-n83"/>
+                                        <constraint firstItem="XbX-EQ-WLU" firstAttribute="top" secondItem="m3W-5d-Kki" secondAttribute="top" constant="10" id="SIT-2B-cLC"/>
+                                        <constraint firstItem="CB7-Cu-m7d" firstAttribute="top" secondItem="39h-Gi-BTE" secondAttribute="bottom" constant="1" id="fnH-6P-9UI"/>
+                                        <constraint firstItem="YmQ-Jl-npc" firstAttribute="leading" secondItem="m3W-5d-Kki" secondAttribute="leadingMargin" constant="25" id="okt-mU-KZv"/>
+                                        <constraint firstItem="CB7-Cu-m7d" firstAttribute="leading" secondItem="39h-Gi-BTE" secondAttribute="leading" id="v81-ra-laN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.061107062550000001" green="0.061107062550000001" blue="0.061107062550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="labelResume" destination="CB7-Cu-m7d" id="JGf-c3-OKY"/>
+                                    <outlet property="labelTitle" destination="39h-Gi-BTE" id="BQ7-EK-CdK"/>
+                                    <outlet property="labelYear" destination="XbX-EQ-WLU" id="Z83-5K-nSn"/>
+                                    <segue destination="fXP-J6-GIV" kind="show" identifier="episodeSegue" id="R0q-tH-b2M"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aWw-ER-mDj" id="mon-BK-5R7"/>
+                            <outlet property="delegate" destination="aWw-ER-mDj" id="hZ6-ph-1QA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chronology" largeTitleDisplayMode="never" id="v2K-ZL-JfK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ep-rp-E2w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1818.4000000000001" y="126.35467980295567"/>
+        </scene>
+        <!--Episode View Controller-->
+        <scene sceneID="e9g-xh-glt">
+            <objects>
+                <viewController id="fXP-J6-GIV" customClass="EpisodeViewController" customModule="StarWarsChronology" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ije-gD-kni">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyj-Po-inl">
+                                <rect key="frame" x="166" y="249" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yD9-Ia-qi9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tNh-89-rjJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIy-gD-9Rg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2710" y="126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bTe-Zt-m74">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pKh-R1-IFg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="p1q-sq-fk6">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94845539329999995" green="0.7565130591" blue="0.37270873789999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aWw-ER-mDj" kind="relationship" relationship="rootViewController" id="m2V-Gr-S6f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OEa-AJ-Ya9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="starwarslogo" width="948" height="520"/>
+    </resources>
 </document>

@@ -1,0 +1,56 @@
+[
+   {
+      "title":"Episode IV: A New Hope",
+      "year":"1977",
+      "resume":"Its a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.",
+      "image": "episode4"
+   },
+   {
+      "title":"Episode V: The Empire Strikes Back",
+      "year":"1980",
+      "resume":"It is a dark time for the Rebellion. Although the Death Star has been destroyed. Imperial troopes have driven the Rebel forces from their hidden base and pursued them across the galaxy.",
+      "image": "episode5"
+   },
+   {
+      "title":"Episode VI: Return of the Jedi",
+      "year":"1983",
+      "resume":"Luke Skywalker has returned to his home planet of Tattoine in an attempt to rescue his friend Han Solo from the clutches of the vile gangster Jabba the Hutt.",
+      "image": "episode6"
+   },
+   {
+      "title":"Episode I: The Phantom Menace",
+      "year":"1999",
+      "resume":"Turmoil has enguifed the Galactic Republic. The taxation of trade routes to outlying star systems is in dispute.",
+      "image": "episode1"
+   },
+   {
+      "title":"Episode II: Attack of the Clones",
+      "year":"2002",
+      "resume":"There is unrest in the Galatic Senate. Severak thousand solar systems have declared their intentions to leave the Republic.",
+      "image": "episode2"
+   },
+   {
+      "title":"Episode III: Revenge of the Sith",
+      "year":"2005",
+      "resume":"War! The Republic is crumbling under attacks by the ruthiess Sith Lord, Count Dooku. There are heroes on both sides. Evil is everywhere.",
+      "image": "episode4"
+   },
+   {
+      "title":"Episode VII: The Force Awakens",
+      "year":"2015",
+      "resume":"Luke Skywalker has vanished. In his absence, the sinister First Order has risen from the ashes of the Empire and will not rest until Skywalker, the last Jedi, has been destroyed.",
+      "image": "episode7"
+   },
+   {
+      "title":"Episode VIII: The Last Jedi",
+      "year":"2017",
+      "resume":"The First Order reigns. Having decimated the peaceful Republic, Supreme Leader Snoke now deploys the merciless legions to seize military control of the galaxy.",
+      "image": "episode8"
+   },
+   {
+      "title":"Episode IX: The Rise of Skywalker",
+      "year":"2019",
+      "resume":"The dead speak! The galaxy has heard a mysterious broadcast, a threat of revenge in the sinister voice of the late Emperor Palpatine.",
+      "image": "episode9"
+   },
+]
