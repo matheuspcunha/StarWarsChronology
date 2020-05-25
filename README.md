@@ -10,3 +10,5 @@ O que está disponivel e o que em breve será implementado:
 - [x] Ordenar por ordem de eventos
 - [ ] Criar ordem favorita
 - [ ] Listagem de spin offs
+
+**May the code be with you!**
