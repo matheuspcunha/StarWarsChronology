@@ -25,7 +25,7 @@
 		966EB70B247AA266008E2A1F /* episodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = episodes.json; sourceTree = "<group>"; };
 		966EB70D247AA3A5008E2A1F /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		966EB70F247AFA3E008E2A1F /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
-		96BC1411247A050800359967 /* StarWarsChronology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsChronology.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BC1411247A050800359967 /* Star Wars Chronology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Wars Chronology.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BC1414247A050800359967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96BC1418247A050800359967 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96BC141B247A050800359967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		96BC1412247A050800359967 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96BC1411247A050800359967 /* StarWarsChronology.app */,
+				96BC1411247A050800359967 /* Star Wars Chronology.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			);
 			name = StarWarsChronology;
 			productName = StarWarsChronology;
-			productReference = 96BC1411247A050800359967 /* StarWarsChronology.app */;
+			productReference = 96BC1411247A050800359967 /* Star Wars Chronology.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -372,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mcunha.StarWarsChronology;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Star Wars Chronology";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -390,7 +390,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mcunha.StarWarsChronology;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Star Wars Chronology";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

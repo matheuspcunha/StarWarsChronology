@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pKh-R1-IFg">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,7 +10,7 @@
         <!--Chronology-->
         <scene sceneID="zu1-RO-Zzx">
             <objects>
-                <tableViewController id="aWw-ER-mDj" customClass="EpisodesListTableViewController" customModule="StarWarsChronology" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aWw-ER-mDj" customClass="EpisodesListTableViewController" customModule="Star_Wars_Chronology" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PqS-oS-lsp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="130" id="iwz-10-adf" customClass="EpisodeTableViewCell" customModule="StarWarsChronology" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="130" id="iwz-10-adf" customClass="EpisodeTableViewCell" customModule="Star_Wars_Chronology" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="163" width="375" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwz-10-adf" id="m3W-5d-Kki">
@@ -121,27 +121,78 @@
         <!--Episode View Controller-->
         <scene sceneID="e9g-xh-glt">
             <objects>
-                <viewController id="fXP-J6-GIV" customClass="EpisodeViewController" customModule="StarWarsChronology" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fXP-J6-GIV" customClass="EpisodeViewController" customModule="Star_Wars_Chronology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ije-gD-kni">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyj-Po-inl">
-                                <rect key="frame" x="166" y="249" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="episode4" translatesAutoresizingMaskIntoConstraints="NO" id="0uG-jL-5BR">
+                                <rect key="frame" x="0.0" y="88" width="375" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="2DS-la-JSy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Scl-or-0QG">
+                                <rect key="frame" x="0.0" y="266" width="375" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="zbV-fP-y5Z"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="episode4poster" translatesAutoresizingMaskIntoConstraints="NO" id="fV9-Mh-lVe">
+                                <rect key="frame" x="40" y="248" width="118" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="Xnd-bi-iVj"/>
+                                    <constraint firstAttribute="height" constant="167" id="YCo-1c-XbJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="episode4logo" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-Sf-9gi">
+                                <rect key="frame" x="185" y="293" width="150" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="8zo-82-hfL"/>
+                                    <constraint firstAttribute="width" constant="150" id="FQR-vV-KDX"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlz-Ai-gX6">
+                                <rect key="frame" x="16" y="445" width="343" height="200"/>
+                                <color key="backgroundColor" red="0.061107062550000001" green="0.061107062550000001" blue="0.061107062550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GgL-Th-dC1"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.061107062550000001" green="0.061107062550000001" blue="0.061107062550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rlz-Ai-gX6" firstAttribute="leading" secondItem="yD9-Ia-qi9" secondAttribute="leading" constant="16" id="1Eg-cd-6tv"/>
+                            <constraint firstItem="0uG-jL-5BR" firstAttribute="trailing" secondItem="yD9-Ia-qi9" secondAttribute="trailing" id="1Ma-LX-wer"/>
+                            <constraint firstItem="lDa-Sf-9gi" firstAttribute="top" secondItem="yD9-Ia-qi9" secondAttribute="top" constant="205" id="AYM-PM-l7T"/>
+                            <constraint firstItem="0uG-jL-5BR" firstAttribute="leading" secondItem="yD9-Ia-qi9" secondAttribute="leading" id="K6U-O9-XIo"/>
+                            <constraint firstItem="0uG-jL-5BR" firstAttribute="top" secondItem="yD9-Ia-qi9" secondAttribute="top" id="Mod-gZ-Iws"/>
+                            <constraint firstItem="yD9-Ia-qi9" firstAttribute="trailing" secondItem="lDa-Sf-9gi" secondAttribute="trailing" constant="40" id="Xaz-gp-r1t"/>
+                            <constraint firstItem="yD9-Ia-qi9" firstAttribute="trailing" secondItem="Rlz-Ai-gX6" secondAttribute="trailing" constant="16" id="ZVF-K3-3bp"/>
+                            <constraint firstItem="Scl-or-0QG" firstAttribute="bottom" secondItem="0uG-jL-5BR" secondAttribute="bottom" id="jXh-j6-lEV"/>
+                            <constraint firstItem="Scl-or-0QG" firstAttribute="leading" secondItem="yD9-Ia-qi9" secondAttribute="leading" id="krZ-BE-Qpr"/>
+                            <constraint firstItem="fV9-Mh-lVe" firstAttribute="leading" secondItem="yD9-Ia-qi9" secondAttribute="leading" constant="40" id="n38-a1-ve2"/>
+                            <constraint firstItem="fV9-Mh-lVe" firstAttribute="top" secondItem="yD9-Ia-qi9" secondAttribute="top" constant="160" id="oba-LO-bZu"/>
+                            <constraint firstItem="Rlz-Ai-gX6" firstAttribute="top" secondItem="fV9-Mh-lVe" secondAttribute="bottom" constant="30" id="xgb-YL-5FU"/>
+                            <constraint firstItem="Scl-or-0QG" firstAttribute="trailing" secondItem="yD9-Ia-qi9" secondAttribute="trailing" id="zWb-Vh-uRl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yD9-Ia-qi9"/>
                     </view>
                     <navigationItem key="navigationItem" id="tNh-89-rjJ"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="lDa-Sf-9gi" id="j2u-uz-YVF"/>
+                        <outlet property="movieImageView" destination="0uG-jL-5BR" id="hmd-Ny-dSO"/>
+                        <outlet property="posterImageView" destination="fV9-Mh-lVe" id="Ezj-2H-qTU"/>
+                        <outlet property="summaryTextView" destination="Rlz-Ai-gX6" id="bSW-vF-987"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIy-gD-9Rg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710" y="126"/>
+            <point key="canvasLocation" x="2709.5999999999999" y="125.61576354679804"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bTe-Zt-m74">
@@ -151,7 +202,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="p1q-sq-fk6">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.94845539329999995" green="0.7565130591" blue="0.37270873789999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.061107062550000001" green="0.061107062550000001" blue="0.061107062550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -164,6 +215,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="episode4" width="574.33331298828125" height="266"/>
+        <image name="episode4logo" width="133.33332824707031" height="66.666664123535156"/>
+        <image name="episode4poster" width="118" height="170.66667175292969"/>
+        <image name="gradient" width="600" height="120"/>
         <image name="starwarslogo" width="948" height="520"/>
     </resources>
 </document>

@@ -14,8 +14,13 @@ struct Episode: Decodable {
     let year: String
     var resume: String?
     let image: String
+    let summary: String
+
+    var poster: String {
+        return image + "poster"
+    }
     
-    var smallImage: String {
-        return image + "small"
+    var logo: String {
+        return image + "logo"
     }
 }
