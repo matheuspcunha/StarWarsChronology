@@ -1,7 +1,7 @@
 # StarWarsChronology
 *A long time ago in a galaxy far, far away....*
 
-Este é o projeto de um app em iOS feito para praticar conceitos aprendidos no curso Dev Venture.
+Este é um app em iOS feito para praticar conceitos de Table View e Auto Layouts, aprendidos no curso Dev Venture.
 
 Neste app você tem a listagem dos filmes de uma galaxia muito distante, Star Wars (não considerando os spin offs, por enquanto! 😉)
 
