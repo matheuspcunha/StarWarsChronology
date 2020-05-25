@@ -17,6 +17,6 @@ class EpisodeTableViewCell: UITableViewCell {
     func configure(with episode: Episode) {
         labelTitle.text = episode.title
         labelResume.text = episode.resume
-        labelYear.text = episode.year
+        labelYear.text = String(episode.year)
     }
 }

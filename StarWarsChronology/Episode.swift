@@ -10,8 +10,9 @@ import Foundation
 
 struct Episode: Decodable {
     
+    let id: Int
     let title: String
-    let year: String
+    let year: Int
     var resume: String?
     let image: String
     let summary: String

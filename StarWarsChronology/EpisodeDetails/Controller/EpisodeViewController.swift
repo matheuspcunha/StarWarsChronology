@@ -16,6 +16,7 @@ class EpisodeViewController: UIViewController {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var summaryTextView: UITextView!
+    @IBOutlet weak var rightsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class EpisodeViewController: UIViewController {
             posterImageView.image = UIImage(named: episode.poster)
             logoImageView.image = UIImage(named: episode.logo)
             summaryTextView.text = episode.summary
+            rightsLabel.text = "\(episode.year) Lucasfilm Ltd. All Rights Reserved."
         }
     }
 }

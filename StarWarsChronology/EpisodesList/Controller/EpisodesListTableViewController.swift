@@ -19,6 +19,7 @@ class EpisodesListTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let episodeViewController = segue.destination as? EpisodeViewController
+        
         if let episodeIndex = tableView.indexPathForSelectedRow?.row {
             episodeViewController?.episode = episodes[episodeIndex]
         }
@@ -26,15 +27,36 @@ class EpisodesListTableViewController: UITableViewController {
     
     func loadEpisodes() {
         guard let jsonURL = Bundle.main.url(forResource: "episodes", withExtension: "json") else {return}
-                do {
-                    let jsonData = try Data(contentsOf: jsonURL)
-                    let jsonDecoder = JSONDecoder()
-                    episodes = try jsonDecoder.decode([Episode].self, from: jsonData)
-                    
-                    tableView.reloadData()
-                } catch {
-                    print(error)
-                }
+        
+        do {
+            let jsonData = try Data(contentsOf: jsonURL)
+            let jsonDecoder = JSONDecoder()
+            episodes = try jsonDecoder.decode([Episode].self, from: jsonData)
+            
+            tableView.reloadData()
+        } catch {
+            print(error)
+        }
+    }
+    
+    @IBAction func choiceOrder(_ sender: Any) {
+        let optionMenu = UIAlertController(title: nil, message: "Choose Order", preferredStyle: .actionSheet)
+            
+        let releaseAction = UIAlertAction(title: "Release order", style: .default, handler: {action in
+            self.episodes = self.episodes.sorted(by: { $0.year < $1.year })
+            self.tableView.reloadData() })
+        
+        let eventAction = UIAlertAction(title: "Event order", style: .default, handler: {action in
+            self.episodes = self.episodes.sorted(by: { $0.id < $1.id })
+            self.tableView.reloadData() })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            
+        optionMenu.addAction(releaseAction)
+        optionMenu.addAction(eventAction)
+        optionMenu.addAction(cancelAction)
+            
+        self.present(optionMenu, animated: true, completion: nil)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int { return 1 }
