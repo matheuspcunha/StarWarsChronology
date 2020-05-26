@@ -3,7 +3,7 @@
 
 Este é um app em iOS feito para praticar conceitos de `Table Views` e `Auto Layouts`, aprendidos no curso Dev Venture.
 
-Neste app você tem a listagem dos filmes de Star Wars (não considerando os spin offs, por enquanto!)
+Neste app você tem a listagem dos filmes da saga Star Wars (não incluso os spin offs, por enquanto!)
 
 ### Features
 - [x] Ordenação por ordem de lançamento
