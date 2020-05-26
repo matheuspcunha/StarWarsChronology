@@ -9,8 +9,6 @@ Neste app você tem a listagem dos filmes de Star Wars (não considerando os spi
 - [x] Ordenação por ordem de lançamento
 - [x] Ordenação por ordem de eventos
 - [ ] Criação de ordens personalizadas
-- [ ] Listagem de spin offs
-
 
 ![](https://media.giphy.com/media/26mfgpNiKHawv3wDS/giphy.gif)
 
