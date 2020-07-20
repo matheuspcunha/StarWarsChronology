@@ -14,6 +14,14 @@ Neste app você tem a listagem dos filmes da saga Star Wars (não incluso os spi
 - [x] Ordenação por ordem de eventos
 - [ ] Criação de ordens personalizadas
 
+### Author
+
+Matheus Cunha, matheuspcunha@gmail.com
+
+### License
+
+StarWarsChronology is available under the MIT license. See the LICENSE file for more info.
+
 ![](https://media.giphy.com/media/26mfgpNiKHawv3wDS/giphy.gif)
 
 **May the code be with you!**
