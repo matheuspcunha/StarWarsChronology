@@ -16,7 +16,7 @@ Neste app você tem a listagem dos filmes da saga Star Wars (não incluso os spi
 
 ### Author
 
-Matheus Cunha, matheuspcunha@hotmail.com
+[Matheus Cunha](https://github.com/matheuspcunha)
 
 ### License
 
